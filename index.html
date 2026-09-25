@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>MovieHub-Discover Your Now</title>
+</head>
+
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased">
+    <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center">
+            <div class="flex gap-2.5 items-center">
+                <svg class="w-7 h-7 sm:w-8 sm:h-8 text-red-600 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v3h2.5l1.5-3H4zm4.5 0l-1.5 3h3l1.5-3H8.5zm5 0l-1.5 3h3l1.5-3h-3zm5 0l-1.5 3H20V6h-1.5zM4 11v7h16v-7H4z" />
+                </svg>
+
+                <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-white">MovieHub</h1>
+            </div>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="" class="hover:text-red-500 transition-colors">Home</a>
+                <a href="" class="hover:text-red-500 transition-colors">About</a>
+                <a href="" class="hover:text-red-500 transition-colors">Search</a>
+                <a href="" class="hover:text-red-500 transition-colors">Contact</a>
+            </nav>
+
+            <div id="hamburger"
+                class="md:hidden cursor-pointer p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition">
+
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
+
+        </div>
+
+        <div id="options" class="hidden md:hidden border-t border-slate-800 bg-slate-900/95">
+            <div class="flex flex-col gap-3 px-6 py-4 text-sm font-medium text-slate-300">
+                <a href="" class="hover:text-red-500 transition-colors py-1">Home</a>
+                <a href="" class="hover:text-red-500 transition-colors py-1">About</a>
+                <a href="" class="hover:text-red-500 transition-colors py-1">Search</a>
+                <a href="" class="hover:text-red-500 transition-colors py-1">Contact</a>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 flex-1">
+
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <span
+                class="inline-block px-3.5 py-1 mb-4 text-xs font-semibold tracking-wider text-red-400 uppercase bg-red-950/40 border border-red-800/40 rounded-full">
+                Unlimited Movies & Shows
+            </span>
+
+            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-4 leading-tight">
+                Discover Your Next <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-500">Favorite
+                    Film</span>
+            </h2>
+
+            <p class="text-slate-400 text-sm sm:text-base lg:text-lg mb-8 max-w-xl mx-auto">
+                Search through thousands of movies, check release years, and explore details instantly in one place.
+            </p>
+
+            <form action="" id="movieForm"
+                class="w-full max-w-xl mx-auto flex flex-col sm:flex-row items-stretch gap-2.5 sm:gap-3 mb-8 sm:mb-12">
+
+                <div class="w-full flex-1">
+                    <input id="movieInput" type="text" placeholder="Search Movie Title ..."
+                        class="w-full bg-slate-900 text-slate-100 placeholder-slate-500 border border-slate-700/80 rounded-xl px-4 py-3 text-sm sm:text-base outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition">
+
+                </div>
+                <button type="submit"
+                    class="bg-red-600 hover:bg-red-700 active:scale-95 text-white font-semibold text-sm sm:text-base px-6 py-3 rounded-xl transition duration-150 shadow-md shadow-red-600/20 cursor-pointer">Search</button>
+            </form>
+        </div>
+
+
+        <div id="movieHub"
+            class="grid grid-cols-1 min-[420px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
