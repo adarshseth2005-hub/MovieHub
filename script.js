@@ -32,7 +32,7 @@ movieHub.addEventListener("click" , (e)=>{
 async function searchMovies(movieName) {
     movieHub.innerHTML = `<p>Searching Moive ...</p>`
 
-    let response = await fetch(`http://www.omdbapi.com/?apikey=21c40192&s=${encodeURIComponent(movieName)}`);
+    let response = await fetch(`https://www.omdbapi.com/?apikey=21c40192&s=${encodeURIComponent(movieName)}`);
 
     let data = await response.json();
 
